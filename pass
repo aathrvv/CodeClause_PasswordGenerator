@@ -1,0 +1,40 @@
+import java.util.*;
+
+class pass {
+    public static void main(String arg[]) {
+
+        // Scanner sc = new Scanner(System.in);
+        String upperLetter = "ZYXWVUTSRQPONMLKJIHGFEDCBA";
+        String lowerLetter = "abcdefghijklmnopqrstuvwxyz";
+        String special = "!@#$%&";
+        String num = "4095623178";
+
+        double randomForUpper = Math.random();
+        randomForUpper *= 26;
+        int random1 = (int) randomForUpper;
+
+        double randomForLower = Math.random();
+        randomForLower *= 26;
+        int random2 = (int) randomForLower;
+
+        double randomForSpecial = Math.random();
+        randomForSpecial *= 6;
+        int random3 = (int) randomForSpecial;
+
+        double randomForNum = Math.random();
+        randomForNum *= 10;
+        int random4 = (int) randomForNum;
+
+        String Password = "";
+        Password += upperLetter.charAt(random1);
+        Password += lowerLetter.charAt(random2);
+        Password += special.charAt(random3);
+        Password += lowerLetter.charAt(random1);
+        Password += upperLetter.charAt(random2);
+        Password += num.charAt(random4);
+
+        System.out.print("Your password is : ");
+        System.out.println(Password);
+
+    }
+}
